@@ -10,8 +10,8 @@ if revenue > costs:
     profit = revenue / costs
     print(f"Поздравляем! Ваше предприятие рентабельно {profit:.3f}. Давайте сейчас посчитаем пирбыль на человека")
     people = int(input("Введите численность Вашего предприятия: "))
-    print(f"Прибыль на человека составила: {(profit/people):.2f}")
-elif revenue > costs:
+    print(f"Прибыль на человека составила: {((revenue-costs)/people):.2f}")
+elif revenue < costs:
     print("Ваше предприятие не рентабельно ((( Не растраивайтесь")
 else:
     print("Ноль это тоже результат. Всё ещё впререди")

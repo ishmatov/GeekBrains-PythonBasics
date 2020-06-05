@@ -5,6 +5,7 @@
 from sys import argv
 
 name, production, rate, bonus = argv
+#production, rate, bonus = map(int, argv[1:])
 changes = True
 for i in range(1, len(argv)):
     if not argv[i].isdigit():
@@ -14,3 +15,6 @@ for i in range(1, len(argv)):
 if changes:
     wage = (int(production) * int(rate)) + int(bonus)
     print(wage)
+
+
+

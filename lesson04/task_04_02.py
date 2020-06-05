@@ -15,3 +15,6 @@ for i in range(1, len(my_list)):
         new_list.append(my_list[i])
 
 print(new_list)
+# --------------------------------------------------------------------------------------------------------
+more_then = [my_list[num] for num in range(1, len(my_list)) if my_list[num] > my_list[num - 1]]
+print(more_then)

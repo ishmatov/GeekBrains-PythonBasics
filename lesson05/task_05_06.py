@@ -7,3 +7,19 @@
 Пример словаря:
 {“Информатика”: 170, “Физика”: 40, “Физкультура”: 30}
 """
+
+final_dict = {}
+try:
+    filename = r"txt\task_05_06.txt"
+    with open(filename, "r", encoding="utf-8") as f_cool:
+        for s in f_cool:
+            sum_hours = 0
+            item = s.split(" ")
+            if len(item) > 0:
+                for i in item[1:len(item)]:
+                    if i.find("(") != -1:
+                        sum_hours += int(i.split("(")[0])
+                final_dict[item[0]] = sum_hours
+    print(final_dict)
+except IOError:
+    print("Такого файла не существует")
