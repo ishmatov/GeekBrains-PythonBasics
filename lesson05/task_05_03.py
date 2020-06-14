@@ -2,6 +2,7 @@
 Определить, кто из сотрудников имеет оклад менее 20 тыс., вывести фамилии этих сотрудников. Выполнить подсчет средней
 величины дохода сотрудников. """
 
+
 employees = []
 count_emp = 0
 common_sum = 0
@@ -10,8 +11,8 @@ try:
     with open(filename, "r", encoding="utf-8") as f_cool:
         for i in f_cool:
             count_emp += 1
-            salary = float(i.split(" ")[1])
-            fio = i.split(" ")[0]
+            salary = float(i.split()[1])
+            fio = i.split()[0]
             common_sum += salary
             if salary < 20000:
                 employees.append(fio)
